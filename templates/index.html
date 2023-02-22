@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./static/style.css">
+        <title>MeilleurCopro</title>
+    </head>
+    <body>
+        <header class="sidebar">
+            <h1>MeilleurCopro</h1>
+        </header>
+        <form action="/exo" method="post">
+            <label for="type_loc">Où :</label>
+            <select id="type_loc" name="type_loc">
+                <!-- DEPT_CODE,ZIP_CODE,CITY -->
+                <option value="DEPT_CODE">Code Département</option> 
+                <option value="CITY">Ville</option>
+                <option value="ZIP_CODE">Code ZIP</option>
+            </select>
+            <label for="localisation"> localisation :</label>
+            <input type="text" name="localisation" id="localisation" placeholder="département, ville ?">
+            <br>
+            <label for="ad_url" > Annonce bienici :</label>
+            <input type="text" name="ad_url" id="ad_url" placeholder="bienici.com/...">
+            <button type="submit">Submit</button>
+        </form>
+        <p>{{ type_loc }}</p>
+        <p>{{ location }}</p>
+        <p>{{ bienici_url }}</p>
+        <p>{{ ChargesCopro }}</p>
+    </body>
+</html>
